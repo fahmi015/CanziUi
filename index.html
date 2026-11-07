@@ -30,11 +30,11 @@
         </div>
         <center>
             <div class="flex justify-center w-1/2 ">
-                <p class="text-white font-semibold text-sm text-center"> أسرع تطبيق توصيل الاكل في مدينة العيون </p>
+                <p class="text-white font-semibold text-sm text-center"> أسرع تطبيق توصيل الاكل في مدينتي العيون والداخلة </p>
             </div>
             <hr class="w-1/2 my-4">
             <div class="flex justify-center w-1/2">
-                <p class="text-white font-semibold text-center text-sm">Profitez de la livraison ultra-rapide à Laâyoune - Votre repas en quelques minutes !</p>
+                <p class="text-white font-semibold text-center text-sm">Profitez de la livraison ultra-rapide à Laâyoune et Dakhla - Votre repas en quelques minutes !</p>
             </div>
         </center>
     </div>
@@ -110,7 +110,7 @@
     <script>
         
         var url = new URL(window.location.href);
-        var source = url.searchParams.get("source");
+        var source = url.searchParams.get("source") || url.searchParams.get("utm_source");
         console.log(source)
         axios.post('https://www.ws.canzitech.com/v1/client/traffic',{source:source == null ? 'web' : source}).then().finally(() => {            var userAgent = navigator.userAgent;
 
